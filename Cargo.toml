@@ -1,0 +1,17 @@
+[package]
+name = "pixi-diff"
+description = "Generate JSON diffs between pixi lockfiles"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.43.0", features = ["rt-multi-thread", "macros"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = [
+  "default",
+  "env-filter",
+] }
+tracing-log = "0.2.0"
+anyhow = "1.0.95"
+clap = { version = "4.5.27", features = ["derive", "string"] }
+clap-verbosity-flag = "3.0.2"
