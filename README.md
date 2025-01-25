@@ -22,8 +22,31 @@
 
 A simple executable to generate a JSON diff (similar to `pixi update --json`) between two pixi lockfiles.
 
-```bash
-pixi-diff pixi.lock pixi.lock.old
+```text
+$ pixi-diff pixi.lock.old pixi.lock.new
+{
+  "version": 1,
+  "environment": {
+    "default": {
+      "osx-arm64": [
+        {
+          "name": "libmpdec",
+          "before": null,
+          "after": {
+            "conda": "https://conda.anaconda.org/conda-forge/osx-arm64/libmpdec-4.0.0-h99b78c6_0.conda",
+            "sha256": "f7917de9117d3a5fe12a39e185c7ce424f8d5010a6f97b4333e8a1dcb2889d16",
+            "md5": "7476305c35dd9acef48da8f754eedb40",
+            "depends": [
+              "__osx >=11.0"
+            ],
+            "license": "BSD-2-Clause",
+            "license_family": "BSD",
+            "size": 69263,
+            "timestamp": 1723817629767
+          },
+          "type": "conda"
+        },
+// ...
 ```
 
 ## Install
