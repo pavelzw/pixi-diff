@@ -79,7 +79,7 @@ You can specify the manifest path (this tool tries out `pixi.toml` and `pyprojec
 If no manifest file is found, `explicit: true/false` is not added to the diff.
 
 ```bash
-
+pixi-diff pixi.lock.old pixi.lock.new --manifest-path pixi.toml
 ```
 
 ### pixi-diff-to-markdown
