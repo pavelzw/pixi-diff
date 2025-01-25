@@ -36,6 +36,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
+          - ubuntu-24.04-arm
           - windows-latest
           - macos-latest
           - macos-13
@@ -53,4 +54,4 @@ jobs:
         with:
           key: tests
       - name: Run test
-        run: pixi run test --color always${{ startsWith(matrix.os, 'ubuntu') && ' --no-default-features --features rustls-tls' || '' }}
+        run: pixi run test --color always

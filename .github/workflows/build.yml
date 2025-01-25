@@ -32,28 +32,20 @@ jobs:
         include:
           - target: x86_64-unknown-linux-musl
             os: ubuntu-latest
-            cross: true
           - target: aarch64-unknown-linux-musl
-            os: ubuntu-latest
-            cross: true
+            os: ubuntu-24.04-arm
           - target: x86_64-unknown-linux-gnu
             os: ubuntu-latest
-            cross: true
           - target: aarch64-unknown-linux-gnu
-            os: ubuntu-latest
-            cross: true
+            os: ubuntu-24.04-arm
           - target: x86_64-pc-windows-msvc
             os: windows-latest
-            cross: false
           - target: aarch64-pc-windows-msvc
             os: windows-latest
-            cross: false
           - target: aarch64-apple-darwin
             os: macos-latest
-            cross: false
           - target: x86_64-apple-darwin
             os: macos-13
-            cross: false
     steps:
       - name: Checkout source code
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -62,18 +54,19 @@ jobs:
         with:
           targets: ${{ matrix.target }}
 
+      - name: Setup musl
+        if: endsWith(matrix.target, '-musl')
+        run: |
+          sudo apt-get install musl-tools
+
       - name: Rust cache
         uses: Swatinem/rust-cache@f0deed1e0edfc6a9be95417288c0e1099b1eeec3 # v2.7.7
         with:
-          key: build-${{ matrix.target }}-${{ needs.metadata.outputs.optimize-build }}-${{ matrix.cross }}-${{ matrix.os }}
-
-      - name: Install cross
-        if: matrix.cross
-        run: cargo install cross --git https://github.com/cross-rs/cross
+          key: build-${{ matrix.target }}-${{ needs.metadata.outputs.optimize-build }}-${{ matrix.os }}
 
       - name: Build
         run: |
-          ${{ matrix.cross && 'cross' || 'cargo' }} build --profile ${{ needs.metadata.outputs.optimize-build && 'release-min-size' || 'release'}} --color always${{ endsWith(matrix.target, 'musl') && ' --no-default-features --features rustls-tls' || '' }} --target ${{ matrix.target }}
+          cargo build --profile ${{ needs.metadata.outputs.optimize-build && 'release-min-size' || 'release' }} --color always --target ${{ matrix.target }}
           mv target/${{ matrix.target }}/${{ needs.metadata.outputs.optimize-build && 'release-min-size' || 'release' }}/pixi-diff${{ endsWith(matrix.target, 'windows-msvc') && '.exe' || '' }} pixi-diff-${{ matrix.target }}${{ endsWith(matrix.target, 'windows-msvc') && '.exe' || '' }}
 
       - name: Upload Artifact
