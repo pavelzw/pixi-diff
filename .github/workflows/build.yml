@@ -54,6 +54,11 @@ jobs:
         with:
           targets: ${{ matrix.target }}
 
+      - name: Setup musl
+        if: endsWith(matrix.target, '-musl')
+        run: |
+          sudo apt-get install musl-tools
+
       - name: Rust cache
         uses: Swatinem/rust-cache@82a92a6e8fbeee089604da2575dc567ae9ddeaab # v2.7.5
         with:
