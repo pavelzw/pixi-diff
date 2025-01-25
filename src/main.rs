@@ -5,7 +5,7 @@ use clap_verbosity_flag::Verbosity;
 
 use tracing_log::AsTrace;
 
-use pixi_diff::{Input, diff};
+use pixi_diff::{diff, Input};
 
 /* -------------------------------------------- CLI -------------------------------------------- */
 
@@ -57,14 +57,26 @@ fn main() -> miette::Result<()> {
     tracing::debug!("Starting pixi-diff CLI");
     tracing::debug!("Parsed CLI options: {:?}", cli);
 
-    if cli.before.is_none() && cli.after.is_none() && cli.before_positional.is_none() && cli.after_positional.is_none() {
+    if cli.before.is_none()
+        && cli.after.is_none()
+        && cli.before_positional.is_none()
+        && cli.after_positional.is_none()
+    {
         miette::bail!("Either [BEFORE] or [AFTER] is required")
     }
 
-    let (before, after) = if let (Some(before_positional), Some(after_positional)) = (cli.before_positional, cli.after_positional) {
-        (Input::File(before_positional), Input::File(after_positional))
+    let (before, after) = if let (Some(before_positional), Some(after_positional)) =
+        (cli.before_positional, cli.after_positional)
+    {
+        (
+            Input::File(before_positional),
+            Input::File(after_positional),
+        )
     } else {
-        (cli.before.unwrap_or(Input::Stdin), cli.after.unwrap_or(Input::Stdin))
+        (
+            cli.before.unwrap_or(Input::Stdin),
+            cli.after.unwrap_or(Input::Stdin),
+        )
     };
 
     // ensure not both are stdin

@@ -1,5 +1,5 @@
+use pixi_diff::{diff, Input};
 use std::path::Path;
-use pixi_diff::{Input, diff};
 
 #[test]
 fn test_diff() {
@@ -7,7 +7,7 @@ fn test_diff() {
     let after = Input::File("tests/resources/pixi.lock.new".into());
 
     let json = diff(before, after, None).unwrap();
-    
+
     let expected = std::fs::read_to_string(Path::new("tests/resources/diff.json")).unwrap();
     let expected = expected.trim();
 
