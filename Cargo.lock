@@ -422,7 +422,7 @@ dependencies = [
 [[package]]
 name = "barrier_cell"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "parking_lot 0.12.3",
  "thiserror 2.0.11",
@@ -909,9 +909,9 @@ checksum = "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b"
 
 [[package]]
 name = "cpufeatures"
-version = "0.2.16"
+version = "0.2.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "16b80225097f2e5ae4e7179dd2266824648f3e2f49d9134d584b76389d31c4c3"
+checksum = "59ed5838eebb26a2bb2e58f6d5b5316989ae9d08bab10e0e6d103e656d1b0280"
 dependencies = [
  "libc",
 ]
@@ -1348,7 +1348,7 @@ dependencies = [
 [[package]]
 name = "fancy_display"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "console",
 ]
@@ -3484,7 +3484,7 @@ dependencies = [
 [[package]]
 name = "pixi"
 version = "0.40.3"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "ahash",
  "assert_matches",
@@ -3619,7 +3619,7 @@ dependencies = [
 [[package]]
 name = "pixi_build_frontend"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "dashmap",
  "fs-err",
@@ -3659,7 +3659,7 @@ dependencies = [
 [[package]]
 name = "pixi_build_type_conversions"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "indexmap 2.7.1",
  "itertools 0.13.0",
@@ -3672,7 +3672,7 @@ dependencies = [
 [[package]]
 name = "pixi_build_types"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "indexmap 2.7.1",
  "rattler_conda_types",
@@ -3686,7 +3686,7 @@ dependencies = [
 [[package]]
 name = "pixi_config"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "clap",
  "console",
@@ -3711,7 +3711,7 @@ dependencies = [
 [[package]]
 name = "pixi_consts"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "console",
  "rattler_cache",
@@ -3722,7 +3722,7 @@ dependencies = [
 [[package]]
 name = "pixi_default_versions"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "rattler_conda_types",
 ]
@@ -3730,7 +3730,7 @@ dependencies = [
 [[package]]
 name = "pixi_git"
 version = "0.0.1"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "dashmap",
  "dunce",
@@ -3751,7 +3751,7 @@ dependencies = [
 [[package]]
 name = "pixi_glob"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "dashmap",
  "fs-err",
@@ -3766,7 +3766,7 @@ dependencies = [
 [[package]]
 name = "pixi_manifest"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "console",
  "dunce",
@@ -3802,7 +3802,7 @@ dependencies = [
 [[package]]
 name = "pixi_progress"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "indicatif",
  "parking_lot 0.12.3",
@@ -3811,7 +3811,7 @@ dependencies = [
 [[package]]
 name = "pixi_pty"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "libc",
  "nix",
@@ -3821,7 +3821,7 @@ dependencies = [
 [[package]]
 name = "pixi_record"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "file_url",
  "miette 7.4.0",
@@ -3839,7 +3839,7 @@ dependencies = [
 [[package]]
 name = "pixi_spec"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "dirs",
  "file_url",
@@ -3862,7 +3862,7 @@ dependencies = [
 [[package]]
 name = "pixi_toml"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "digest",
  "hex",
@@ -3875,7 +3875,7 @@ dependencies = [
 [[package]]
 name = "pixi_utils"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "async-fd-lock",
  "fs-err",
@@ -3904,7 +3904,7 @@ dependencies = [
 [[package]]
 name = "pixi_uv_conversions"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "dunce",
  "miette 7.4.0",
@@ -4135,7 +4135,7 @@ dependencies = [
 [[package]]
 name = "pypi_mapping"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "async-once-cell",
  "fs-err",
@@ -4161,7 +4161,7 @@ dependencies = [
 [[package]]
 name = "pypi_modifiers"
 version = "0.1.0"
-source = "git+https://github.com/pavelzw/pixi?branch=diff-public#91a1e9dfd11ff778c130102c90a1b82a62bd3c1c"
+source = "git+https://github.com/pavelzw/pixi?branch=diff-public#8a8f8d42e04b63f8805b5926db4f037d039f852b"
 dependencies = [
  "miette 7.4.0",
  "pixi_default_versions",
