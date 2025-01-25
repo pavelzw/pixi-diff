@@ -14,7 +14,7 @@ tracing-log = "0.2.0"
 miette = "7.4.0"
 clap = { version = "4.5.27", features = ["derive", "string"] }
 clap-verbosity-flag = "3.0.2"
+serde_json = "1.0.137"
 rattler_lock = "0.22.39"
 pixi = { git = "https://github.com/pavelzw/pixi", branch = "diff-public" }
-serde_json = "1.0.137"
 # pixi = { git = "https://github.com/prefix-dev/pixi", rev = "v0.40.3" }
