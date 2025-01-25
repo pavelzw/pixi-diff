@@ -3,20 +3,42 @@ use std::path::PathBuf;
 use clap::Parser;
 use clap_verbosity_flag::Verbosity;
 
-use anyhow::Result;
 use tracing_log::AsTrace;
 
+use pixi_diff::{diff, Input};
+
 /* -------------------------------------------- CLI -------------------------------------------- */
+
+fn parse_input(s: &str) -> Result<Input, String> {
+    if s == "-" {
+        Ok(Input::Stdin)
+    } else {
+        Ok(Input::File(PathBuf::from(s)))
+    }
+}
 
 /// The pixi-diff CLI.
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 struct Cli {
     /// First lockfile to be compared.
-    minus_file: PathBuf,
-
+    #[arg(long, short, value_parser = parse_input)]
+    before: Option<Input>,
     /// Second lockfile to be compared.
-    plus_file: PathBuf,
+    #[arg(long, short, value_parser = parse_input)]
+    after: Option<Input>,
+
+    // Positional args needed s.t. `pixi-diff old-file new-file` also works
+    /// First lockfile to be compared.
+    #[clap(name = "BEFORE", requires = "AFTER", conflicts_with_all = ["before", "after"])]
+    before_positional: Option<PathBuf>,
+    /// Second lockfile to be compared.
+    #[clap(name = "AFTER", requires = "BEFORE")]
+    after_positional: Option<PathBuf>,
+
+    /// Pixi manifest file. Used to determine whether a dependency is explicit.
+    #[arg(long)]
+    manifest_path: Option<PathBuf>,
 
     #[command(flatten)]
     verbose: Verbosity,
@@ -25,8 +47,7 @@ struct Cli {
 /* -------------------------------------------- MAIN ------------------------------------------- */
 
 /// The main entrypoint for the pixi-diff CLI.
-#[tokio::main]
-async fn main() -> Result<()> {
+fn main() -> miette::Result<()> {
     let cli = Cli::parse();
 
     tracing_subscriber::FmtSubscriber::builder()
@@ -36,7 +57,36 @@ async fn main() -> Result<()> {
     tracing::debug!("Starting pixi-diff CLI");
     tracing::debug!("Parsed CLI options: {:?}", cli);
 
-    
+    if cli.before.is_none()
+        && cli.after.is_none()
+        && cli.before_positional.is_none()
+        && cli.after_positional.is_none()
+    {
+        miette::bail!("Either [BEFORE] or [AFTER] is required")
+    }
+
+    let (before, after) = if let (Some(before_positional), Some(after_positional)) =
+        (cli.before_positional, cli.after_positional)
+    {
+        (
+            Input::File(before_positional),
+            Input::File(after_positional),
+        )
+    } else {
+        (
+            cli.before.unwrap_or(Input::Stdin),
+            cli.after.unwrap_or(Input::Stdin),
+        )
+    };
+
+    // ensure not both are stdin
+    if matches!(before, Input::Stdin) && matches!(after, Input::Stdin) {
+        miette::bail!("Cannot read both inputs from stdin");
+    }
+    tracing::debug!("Before: {:?}, After: {:?}", before, after);
+
+    let json = diff(before, after, cli.manifest_path.as_deref())?;
+    println!("{}", json);
 
     Ok(())
 }

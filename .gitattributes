@@ -1,2 +1,4 @@
 # GitHub syntax highlighting
 pixi.lock linguist-language=YAML
+# needed for integration tests to pass on Windows as rust println always does \n and not \r\n
+tests/resources/diff.json text eol=lf
