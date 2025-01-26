@@ -58,7 +58,7 @@ pixi global install pixi-diff
 You can also use this tool in a temporary environment using `pixi exec`:
 
 ```bash
-pixi exec pixi-diff pixi.lock pixi.lock.old
+pixi exec pixi-diff pixi.lock.old pixi.lock.new
 ```
 
 ## Usage
