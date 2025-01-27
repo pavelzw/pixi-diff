@@ -111,5 +111,21 @@ This tool integrates with [pixi-diff-to-markdown](https://github.com/pavelzw/pix
 You can pass this tool's stdout to `pixi-diff-to-markdown` and generate markdown diffs this way.
 
 ```bash
-git show HEAD~20:pixi.lock | pixi exec pixi-diff --after pixi.lock | pixi exec pixi-diff-to-markdown > diff.md
+$ git show HEAD~20:pixi.lock | pixi exec pixi-diff --after pixi.lock | pixi exec pixi-diff-to-markdown
+# Explicit dependencies
+...
 ```
+
+#### View with md-tui
+
+You can view this generated markdown file in your terminal using [md-tui](https://github.com/henriklovhaug/md-tui) (available on [conda-forge](https://prefix.dev/channels/conda-forge/packages/md-tui)).
+
+```bash
+git show HEAD~20:pixi.lock | pixi exec pixi-diff --after pixi.lock | pixi exec pixi-diff-to-markdown > diff.md
+pixi exec -s md-tui -- mdt diff.md
+```
+
+Two issues with this approach:
+
+- `md-tui` does not support bold and italic links ([henriklovhaug/md-tui #91](https://github.com/henriklovhaug/md-tui/issues/91))
+- `md-tui` does not support reading from stdin ([henriklovhaug/md-tui #167](https://github.com/henriklovhaug/md-tui/issues/167))
