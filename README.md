@@ -96,7 +96,7 @@ pixi-diff --before pixi.lock.old --after pixi.lock.new
 Named pipes can be handy for comparing lockfiles from different states in your git history:
 
 ```bash
-# bash
+# bash / zsh
 pixi-diff <(git show HEAD~20:pixi.lock) pixi.lock
 # or equivalently
 pixi-diff --before <(git show HEAD~20:pixi.lock) --after pixi.lock

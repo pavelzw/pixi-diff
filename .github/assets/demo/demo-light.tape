@@ -26,5 +26,5 @@ Sleep 5s
 
 Type@150ms "mdt diff.md" Sleep 1s Enter
 Sleep 4s
-Down@350ms 15
+Down@150ms 15
 Sleep 8s
