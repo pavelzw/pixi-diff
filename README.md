@@ -18,6 +18,9 @@
 
 </div>
 
+![pixi-diff demo](.github/assets/demo/demo-light.gif#gh-light-mode-only)
+![pixi-diff demo](.github/assets/demo/demo-dark.gif#gh-dark-mode-only)
+
 # pixi-diff
 
 A simple executable to generate a JSON diff (similar to `pixi update --json`) between two pixi lockfiles.
@@ -90,12 +93,24 @@ pixi-diff pixi.lock.old pixi.lock.new
 pixi-diff --before pixi.lock.old --after pixi.lock.new
 ```
 
+Named pipes can be handy for comparing lockfiles from different states in your git history:
+
+```bash
+# bash / zsh
+pixi-diff <(git show HEAD~20:pixi.lock) pixi.lock
+# or equivalently
+pixi-diff --before <(git show HEAD~20:pixi.lock) --after pixi.lock
+
+# fish
+pixi-diff (git show HEAD~20:pixi.lock | psub) pixi.lock
+# or equivalently
+pixi-diff --before (git show HEAD~20:pixi.lock | psub) --after pixi.lock
+```
+
 Or specify either the "before" or "after" lockfile via stdin:
 
 ```bash
-pixi-diff --after pixi.lock <(git show HEAD~20:pixi.lock)
-# or equivalently
-git show HEAD~20:pixi.lock | pixi-diff --after pixi.lock --before -
+git show HEAD~20:pixi.lock | pixi-diff --before - --after pixi.lock
 ```
 
 You can specify the manifest path (this tool tries out `pixi.toml` and `pyproject.toml` if not specified) to add `explicit: true/false` to your JSON diff.
@@ -111,5 +126,25 @@ This tool integrates with [pixi-diff-to-markdown](https://github.com/pavelzw/pix
 You can pass this tool's stdout to `pixi-diff-to-markdown` and generate markdown diffs this way.
 
 ```bash
-git show HEAD~20:pixi.lock | pixi exec pixi-diff --after pixi.lock | pixi exec pixi-diff-to-markdown > diff.md
+$ git show HEAD~20:pixi.lock | pixi-diff --after pixi.lock | pixi-diff-to-markdown
+# Explicit dependencies
+...
 ```
+
+#### View with md-tui
+
+You can view this generated markdown file in your terminal using [md-tui](https://github.com/henriklovhaug/md-tui) (available on [conda-forge](https://prefix.dev/channels/conda-forge/packages/md-tui)).
+
+```bash
+git show HEAD~20:pixi.lock | pixi-diff --before - --after pixi.lock | pixi-diff-to-markdown > diff.md
+mdt diff.md
+# or using pixi exec
+git show HEAD~20:pixi.lock | pixi exec pixi-diff --before - --after pixi.lock | pixi exec pixi-diff-to-markdown > diff.md
+pixi exec -s md-tui -- mdt diff.md
+```
+
+Three issues with this approach:
+
+- md-tui does not support bold and italic links ([henriklovhaug/md-tui #91](https://github.com/henriklovhaug/md-tui/issues/91))
+- md-tui does not support reading from stdin ([henriklovhaug/md-tui #167](https://github.com/henriklovhaug/md-tui/issues/167))
+- md-tui does not support Windows ([henriklovhaug/md-tui #168](https://github.com/henriklovhaug/md-tui/issues/168))
