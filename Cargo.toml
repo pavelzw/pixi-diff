@@ -11,9 +11,9 @@ tracing-subscriber = { version = "0.3.19", features = [
   "env-filter",
 ] }
 tracing-log = "0.2.0"
-miette = "7.4.0"
+miette = "7.5.0"
 clap = { version = "4.5.27", features = ["derive", "string"] }
 clap-verbosity-flag = "3.0.2"
-serde_json = "1.0.137"
-rattler_lock = "0.22.39"
+serde_json = "1.0.138"
+rattler_lock = "0.22.40"
 pixi = { git = "https://github.com/prefix-dev/pixi", branch = "main" }

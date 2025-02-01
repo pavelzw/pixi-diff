@@ -422,7 +422,7 @@ dependencies = [
 [[package]]
 name = "barrier_cell"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "parking_lot 0.12.3",
  "thiserror 2.0.11",
@@ -1348,7 +1348,7 @@ dependencies = [
 [[package]]
 name = "fancy_display"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "console",
 ]
@@ -1473,16 +1473,6 @@ name = "fs_extra"
 version = "1.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "42703706b716c37f96a77aea830392ad231f44c9e9a67872fa5548707e11b11c"
-
-[[package]]
-name = "fslock"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "04412b8935272e3a9bae6f48c7bfff74c2911f60525404edfdd28e49884c3bfb"
-dependencies = [
- "libc",
- "winapi",
-]
 
 [[package]]
 name = "funty"
@@ -2864,12 +2854,12 @@ dependencies = [
 
 [[package]]
 name = "miette"
-version = "7.4.0"
+version = "7.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "317f146e2eb7021892722af37cf1b971f0a70c8406f487e24952667616192c64"
+checksum = "1a955165f87b37fd1862df2a59547ac542c77ef6d17c666f619d1ad22dd89484"
 dependencies = [
  "cfg-if",
- "miette-derive 7.4.0",
+ "miette-derive 7.5.0",
  "owo-colors",
  "serde",
  "supports-color",
@@ -2894,9 +2884,9 @@ dependencies = [
 
 [[package]]
 name = "miette-derive"
-version = "7.4.0"
+version = "7.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "23c9b935fbe1d6cbd1dac857b54a688145e2d93f48db36010514d0f612d0ad67"
+checksum = "bf45bf44ab49be92fd1227a3be6fc6f617f1a337c06af54981048574d8783147"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3484,7 +3474,7 @@ dependencies = [
 [[package]]
 name = "pixi"
 version = "0.40.3"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "ahash",
  "assert_matches",
@@ -3518,7 +3508,7 @@ dependencies = [
  "is_executable",
  "itertools 0.13.0",
  "libc",
- "miette 7.4.0",
+ "miette 7.5.0",
  "minijinja",
  "nix",
  "once_cell",
@@ -3607,7 +3597,7 @@ version = "0.0.2"
 dependencies = [
  "clap",
  "clap-verbosity-flag",
- "miette 7.4.0",
+ "miette 7.5.0",
  "pixi",
  "rattler_lock",
  "serde_json",
@@ -3619,14 +3609,14 @@ dependencies = [
 [[package]]
 name = "pixi_build_frontend"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "dashmap",
  "fs-err",
  "futures",
  "itertools 0.13.0",
  "jsonrpsee",
- "miette 7.4.0",
+ "miette 7.5.0",
  "pixi_build_type_conversions",
  "pixi_build_types",
  "pixi_config",
@@ -3659,7 +3649,7 @@ dependencies = [
 [[package]]
 name = "pixi_build_type_conversions"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "indexmap 2.7.1",
  "itertools 0.13.0",
@@ -3672,7 +3662,7 @@ dependencies = [
 [[package]]
 name = "pixi_build_types"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "indexmap 2.7.1",
  "rattler_conda_types",
@@ -3686,14 +3676,14 @@ dependencies = [
 [[package]]
 name = "pixi_config"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "clap",
  "console",
  "dirs",
  "fs-err",
  "itertools 0.13.0",
- "miette 7.4.0",
+ "miette 7.5.0",
  "pixi_consts",
  "rattler",
  "rattler_conda_types",
@@ -3711,7 +3701,7 @@ dependencies = [
 [[package]]
 name = "pixi_consts"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "console",
  "rattler_cache",
@@ -3722,7 +3712,7 @@ dependencies = [
 [[package]]
 name = "pixi_default_versions"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "rattler_conda_types",
 ]
@@ -3730,12 +3720,12 @@ dependencies = [
 [[package]]
 name = "pixi_git"
 version = "0.0.1"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "dashmap",
  "dunce",
  "fs-err",
- "miette 7.4.0",
+ "miette 7.5.0",
  "pixi_utils",
  "reqwest",
  "reqwest-middleware",
@@ -3751,7 +3741,7 @@ dependencies = [
 [[package]]
 name = "pixi_glob"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "dashmap",
  "fs-err",
@@ -3766,7 +3756,7 @@ dependencies = [
 [[package]]
 name = "pixi_manifest"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "console",
  "dunce",
@@ -3774,7 +3764,7 @@ dependencies = [
  "fs-err",
  "indexmap 2.7.1",
  "itertools 0.13.0",
- "miette 7.4.0",
+ "miette 7.5.0",
  "pep440_rs",
  "pep508_rs",
  "pixi_consts",
@@ -3802,7 +3792,7 @@ dependencies = [
 [[package]]
 name = "pixi_progress"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "indicatif",
  "parking_lot 0.12.3",
@@ -3811,7 +3801,7 @@ dependencies = [
 [[package]]
 name = "pixi_pty"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "libc",
  "nix",
@@ -3821,10 +3811,10 @@ dependencies = [
 [[package]]
 name = "pixi_record"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "file_url",
- "miette 7.4.0",
+ "miette 7.5.0",
  "pixi_git",
  "pixi_spec",
  "rattler_conda_types",
@@ -3839,7 +3829,7 @@ dependencies = [
 [[package]]
 name = "pixi_spec"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "dirs",
  "file_url",
@@ -3862,7 +3852,7 @@ dependencies = [
 [[package]]
 name = "pixi_toml"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "digest",
  "hex",
@@ -3875,13 +3865,13 @@ dependencies = [
 [[package]]
 name = "pixi_utils"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "async-fd-lock",
  "fs-err",
  "indicatif",
  "itertools 0.13.0",
- "miette 7.4.0",
+ "miette 7.5.0",
  "pep508_rs",
  "pixi_config",
  "pixi_consts",
@@ -3904,10 +3894,10 @@ dependencies = [
 [[package]]
 name = "pixi_uv_conversions"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "dunce",
- "miette 7.4.0",
+ "miette 7.5.0",
  "pep440_rs",
  "pep508_rs",
  "pixi_git",
@@ -4135,14 +4125,14 @@ dependencies = [
 [[package]]
 name = "pypi_mapping"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
  "async-once-cell",
  "fs-err",
  "futures",
  "http-cache-reqwest",
  "itertools 0.13.0",
- "miette 7.4.0",
+ "miette 7.5.0",
  "pep440_rs",
  "pep508_rs",
  "pixi_config",
@@ -4161,9 +4151,9 @@ dependencies = [
 [[package]]
 name = "pypi_modifiers"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?branch=main#dd6f3397520ddb1426e75e011ccca4e2ee3dcb81"
+source = "git+https://github.com/prefix-dev/pixi?branch=main#6b0e7ca2654049ff0908258098be76b3e2ed308d"
 dependencies = [
- "miette 7.4.0",
+ "miette 7.5.0",
  "pixi_default_versions",
  "pixi_manifest",
  "rattler_conda_types",
@@ -4309,9 +4299,9 @@ dependencies = [
 
 [[package]]
 name = "rattler"
-version = "0.28.12"
+version = "0.29.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "96937e1577a695522edd841d6f24afc081b51088b6aee17c998e28a7f18b17bd"
+checksum = "9e8ae420dece97e74ee63147f32e0313a15ec6291b39cfa4084b729564f3867e"
 dependencies = [
  "anyhow",
  "clap",
@@ -4351,9 +4341,9 @@ dependencies = [
 
 [[package]]
 name = "rattler_cache"
-version = "0.3.4"
+version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bbbcd7cdb06120d2ef74825a112829f594ba73ad6b015ca0dcb33e6ac45265ba"
+checksum = "fbbaf9b271d64032f993fd79089e2a50fc892ba3b6c302fd36291f0c255ad603"
 dependencies = [
  "anyhow",
  "dashmap",
@@ -4381,9 +4371,9 @@ dependencies = [
 
 [[package]]
 name = "rattler_conda_types"
-version = "0.29.10"
+version = "0.30.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "89a5c08cc30a081ab4b40df1cb1a082f1dd053e7f3a5b5378b9c538b4d9629f2"
+checksum = "a8bbea6227e4049dc1c22573e8ff76e66cf97e8bec24106b3a58f068c5353239"
 dependencies = [
  "chrono",
  "dirs",
@@ -4436,9 +4426,9 @@ dependencies = [
 
 [[package]]
 name = "rattler_lock"
-version = "0.22.39"
+version = "0.22.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "15696b37d28d7c1b13e622e62998e68c38e84d59c7a5900ed8424af305bdf47b"
+checksum = "74efa36e8f06335cda9accf33906de6aab2748ddfdf07bf34b42e6d6e1371e26"
 dependencies = [
  "chrono",
  "file_url",
@@ -4471,16 +4461,16 @@ dependencies = [
 
 [[package]]
 name = "rattler_networking"
-version = "0.21.10"
+version = "0.22.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ccea7413f0abad1d36e7903a32f69494d77304bf180e2ee9db64a2e53d87c0ce"
+checksum = "0f51e99049404b7af6ec4939467471600d220dc047e2ce111607d95664134605"
 dependencies = [
  "anyhow",
+ "async-fd-lock",
  "async-trait",
  "base64 0.22.1",
  "chrono",
  "dirs",
- "fslock",
  "getrandom",
  "google-cloud-auth",
  "google-cloud-token",
@@ -4500,9 +4490,9 @@ dependencies = [
 
 [[package]]
 name = "rattler_package_streaming"
-version = "0.22.23"
+version = "0.22.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2e2a5ded69e140597a06840d3272f47152dde383b61b652aab5affe9686f2ed9"
+checksum = "d66612512b57c80841d99771030c61ae45ad02eb2272289fb12303bf02aeb587"
 dependencies = [
  "bzip2 0.5.0",
  "chrono",
@@ -4540,9 +4530,9 @@ dependencies = [
 
 [[package]]
 name = "rattler_repodata_gateway"
-version = "0.21.32"
+version = "0.21.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "962bfddb513a1450a0ddd1dd8ba1f8ae3f3bc09b78e15d8637dfc849cd73da48"
+checksum = "6faef71b30bdfcd4c9a29d04e4d2750e8c6347430758f81676d345d3834d0837"
 dependencies = [
  "anyhow",
  "async-compression",
@@ -4596,9 +4586,9 @@ dependencies = [
 
 [[package]]
 name = "rattler_shell"
-version = "0.22.15"
+version = "0.22.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8c490f65decb6fa347c74da3fa5b102b92c996bb2ae7b22312d7af76ea1549f9"
+checksum = "20aa508a9086854d414c356a03b3f240699b220f5300f0798592e2398b6cc61b"
 dependencies = [
  "enum_dispatch",
  "fs-err",
@@ -4615,12 +4605,13 @@ dependencies = [
 
 [[package]]
 name = "rattler_solve"
-version = "1.3.4"
+version = "1.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0d81d1740302b824bb227ae8e3a6a44c72fd5bc6e10caf5db17d5d5e4e47d988"
+checksum = "b4376133643a36e92e94e647e920ac4a253b31b94858c79619ae4b3b289535f8"
 dependencies = [
  "chrono",
  "futures",
+ "indexmap 2.7.1",
  "itertools 0.14.0",
  "rattler_conda_types",
  "rattler_digest",
@@ -4634,9 +4625,9 @@ dependencies = [
 
 [[package]]
 name = "rattler_virtual_packages"
-version = "1.2.0"
+version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6d1bfbc5092bf9f26fdbac9d0ea5327e552ba939e3ea424f70401d917b166ba2"
+checksum = "fa0e5bc2c87f5bb27e42e06be3c3d5f0c0f3d7d9ef1dc276881fb8cf81846b91"
 dependencies = [
  "archspec",
  "libloading",
@@ -4648,6 +4639,7 @@ dependencies = [
  "serde",
  "thiserror 2.0.11",
  "tracing",
+ "winver",
 ]
 
 [[package]]
@@ -5390,9 +5382,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.137"
+version = "1.0.138"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "930cfb6e6abf99298aaad7d29abbef7a9999a9a8806a40088f55f0dcec03146b"
+checksum = "d434192e7da787e94a6ea7e9670b26a036d0ca41e0b7efb2676dd32bae872949"
 dependencies = [
  "indexmap 2.7.1",
  "itoa",
@@ -6432,7 +6424,7 @@ dependencies = [
 [[package]]
 name = "uv-auth"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -6454,7 +6446,7 @@ dependencies = [
 [[package]]
 name = "uv-build-frontend"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anstream",
  "anyhow",
@@ -6487,7 +6479,7 @@ dependencies = [
 [[package]]
 name = "uv-cache"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "fs-err",
  "nanoid",
@@ -6511,7 +6503,7 @@ dependencies = [
 [[package]]
 name = "uv-cache-info"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "fs-err",
  "globwalk",
@@ -6524,7 +6516,7 @@ dependencies = [
 [[package]]
 name = "uv-cache-key"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "hex",
  "seahash",
@@ -6534,7 +6526,7 @@ dependencies = [
 [[package]]
 name = "uv-client"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -6583,7 +6575,7 @@ dependencies = [
 [[package]]
 name = "uv-configuration"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "either",
  "fs-err",
@@ -6610,7 +6602,7 @@ dependencies = [
 [[package]]
 name = "uv-console"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "console",
  "ctrlc",
@@ -6619,7 +6611,7 @@ dependencies = [
 [[package]]
 name = "uv-dirs"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "etcetera",
  "uv-static",
@@ -6628,7 +6620,7 @@ dependencies = [
 [[package]]
 name = "uv-dispatch"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "futures",
@@ -6653,7 +6645,7 @@ dependencies = [
 [[package]]
 name = "uv-distribution"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "either",
@@ -6698,7 +6690,7 @@ dependencies = [
 [[package]]
 name = "uv-distribution-filename"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "rkyv",
  "serde",
@@ -6712,7 +6704,7 @@ dependencies = [
 [[package]]
 name = "uv-distribution-types"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "bitflags 2.8.0",
@@ -6745,7 +6737,7 @@ dependencies = [
 [[package]]
 name = "uv-extract"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "async-compression",
  "async_zip",
@@ -6771,7 +6763,7 @@ dependencies = [
 [[package]]
 name = "uv-fs"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "backoff",
  "cachedir",
@@ -6795,7 +6787,7 @@ dependencies = [
 [[package]]
 name = "uv-git"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "cargo-util",
@@ -6818,7 +6810,7 @@ dependencies = [
 [[package]]
 name = "uv-install-wheel"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "configparser",
  "csv",
@@ -6855,7 +6847,7 @@ dependencies = [
 [[package]]
 name = "uv-installer"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "async-channel",
@@ -6892,7 +6884,7 @@ dependencies = [
 [[package]]
 name = "uv-macros"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -6903,7 +6895,7 @@ dependencies = [
 [[package]]
 name = "uv-metadata"
 version = "0.1.0"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "async_zip",
  "fs-err",
@@ -6920,7 +6912,7 @@ dependencies = [
 [[package]]
 name = "uv-normalize"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "rkyv",
  "schemars",
@@ -6930,7 +6922,7 @@ dependencies = [
 [[package]]
 name = "uv-once-map"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "dashmap",
  "futures",
@@ -6940,7 +6932,7 @@ dependencies = [
 [[package]]
 name = "uv-options-metadata"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "serde",
 ]
@@ -6948,7 +6940,7 @@ dependencies = [
 [[package]]
 name = "uv-pep440"
 version = "0.7.0"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "rkyv",
  "serde",
@@ -6961,7 +6953,7 @@ dependencies = [
 [[package]]
 name = "uv-pep508"
 version = "0.6.0"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "boxcar",
  "indexmap 2.7.1",
@@ -6983,7 +6975,7 @@ dependencies = [
 [[package]]
 name = "uv-platform-tags"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "rustc-hash",
  "serde",
@@ -6993,7 +6985,7 @@ dependencies = [
 [[package]]
 name = "uv-pypi-types"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "hashbrown 0.15.2",
  "indexmap 2.7.1",
@@ -7021,7 +7013,7 @@ dependencies = [
 [[package]]
 name = "uv-python"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "configparser",
@@ -7072,7 +7064,7 @@ dependencies = [
 [[package]]
 name = "uv-requirements"
 version = "0.1.0"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "configparser",
@@ -7107,7 +7099,7 @@ dependencies = [
 [[package]]
 name = "uv-requirements-txt"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "fs-err",
  "regex",
@@ -7129,7 +7121,7 @@ dependencies = [
 [[package]]
 name = "uv-resolver"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "clap",
@@ -7181,7 +7173,7 @@ dependencies = [
 [[package]]
 name = "uv-shell"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "home",
@@ -7195,7 +7187,7 @@ dependencies = [
 [[package]]
 name = "uv-state"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "fs-err",
  "tempfile",
@@ -7205,7 +7197,7 @@ dependencies = [
 [[package]]
 name = "uv-static"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "uv-macros",
 ]
@@ -7213,7 +7205,7 @@ dependencies = [
 [[package]]
 name = "uv-trampoline-builder"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "fs-err",
  "thiserror 2.0.11",
@@ -7224,7 +7216,7 @@ dependencies = [
 [[package]]
 name = "uv-types"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anyhow",
  "rustc-hash",
@@ -7245,12 +7237,12 @@ dependencies = [
 [[package]]
 name = "uv-version"
 version = "0.5.6"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 
 [[package]]
 name = "uv-virtualenv"
 version = "0.0.4"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "fs-err",
  "itertools 0.13.0",
@@ -7268,7 +7260,7 @@ dependencies = [
 [[package]]
 name = "uv-warnings"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "anstream",
  "owo-colors",
@@ -7278,7 +7270,7 @@ dependencies = [
 [[package]]
 name = "uv-workspace"
 version = "0.0.1"
-source = "git+https://github.com/wolfv/uv?branch=ignore-rayon-init#878234ba6b9a3b143e079ca9baa4bec99af93600"
+source = "git+https://github.com/astral-sh/uv?tag=0.5.6#b70c4f30eeb47c15fbabd54173f952877d5cfc43"
 dependencies = [
  "fs-err",
  "glob",
@@ -7559,6 +7551,15 @@ name = "winapi-x86_64-pc-windows-gnu"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"
+
+[[package]]
+name = "windows"
+version = "0.48.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e686886bc078bc1b0b600cac0147aadb815089b6e4da64016cbd754b6342700f"
+dependencies = [
+ "windows-targets 0.48.5",
+]
 
 [[package]]
 name = "windows"
@@ -7977,6 +7978,15 @@ name = "winsafe"
 version = "0.0.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7d6ad6cbd9c6e5144971e326303f0e453b61d82e4f72067fccf23106bccd8437"
+
+[[package]]
+name = "winver"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e0e7162b9e282fd75a0a832cce93994bdb21208d848a418cd05a5fdd9b9ab33"
+dependencies = [
+ "windows 0.48.0",
+]
 
 [[package]]
 name = "write16"
