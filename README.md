@@ -143,8 +143,10 @@ git show HEAD~20:pixi.lock | pixi exec pixi-diff --before - --after pixi.lock | 
 pixi exec -s md-tui -- mdt diff.md
 ```
 
-Three issues with this approach:
+A couple of issues with this approach:
 
 - md-tui does not support bold and italic links ([henriklovhaug/md-tui #91](https://github.com/henriklovhaug/md-tui/issues/91))
+- md-tui does not support footnotes ([henriklovhaug/md-tui #162](https://github.com/henriklovhaug/md-tui/issues/162))
 - md-tui does not support reading from stdin ([henriklovhaug/md-tui #167](https://github.com/henriklovhaug/md-tui/issues/167))
 - md-tui does not support Windows ([henriklovhaug/md-tui #168](https://github.com/henriklovhaug/md-tui/issues/168))
+- md-tui does not support the `<details>` tag ([henriklovhaug/md-tui #169](https://github.com/henriklovhaug/md-tui/issues/169))
