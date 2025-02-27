@@ -3,8 +3,6 @@ use std::path::PathBuf;
 use clap::Parser;
 use clap_verbosity_flag::Verbosity;
 
-use tracing_log::AsTrace;
-
 use pixi_diff::{diff, Input};
 
 /* -------------------------------------------- CLI -------------------------------------------- */
@@ -51,7 +49,7 @@ fn main() -> miette::Result<()> {
     let cli = Cli::parse();
 
     tracing_subscriber::FmtSubscriber::builder()
-        .with_max_level(cli.verbose.log_level_filter().as_trace())
+        .with_max_level(cli.verbose)
         .init();
 
     tracing::debug!("Starting pixi-diff CLI");
