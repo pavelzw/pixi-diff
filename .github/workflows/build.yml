@@ -60,7 +60,7 @@ jobs:
           sudo apt-get install musl-tools
 
       - name: Rust cache
-        uses: Swatinem/rust-cache@f0deed1e0edfc6a9be95417288c0e1099b1eeec3 # v2.7.7
+        uses: Swatinem/rust-cache@9d47c6ad4b02e050fd481d890b2ea34778fd09d6 # v2.7.8
         with:
           key: build-${{ matrix.target }}-${{ needs.metadata.outputs.optimize-build }}-${{ matrix.os }}
 
@@ -70,7 +70,7 @@ jobs:
           mv target/${{ matrix.target }}/${{ needs.metadata.outputs.optimize-build && 'release-min-size' || 'release' }}/pixi-diff${{ endsWith(matrix.target, 'windows-msvc') && '.exe' || '' }} pixi-diff-${{ matrix.target }}${{ endsWith(matrix.target, 'windows-msvc') && '.exe' || '' }}
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4.6.1
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: pixi-diff-${{ matrix.target }}
           path: pixi-diff-${{ matrix.target }}${{ endsWith(matrix.target, 'windows-msvc') && '.exe' || '' }}
@@ -86,7 +86,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Download artifacts
-        uses: actions/download-artifact@cc203385981b70ca67e1cc392babf9cc229d5806 # v4.1.9
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           pattern: pixi-diff-*
           merge-multiple: true
@@ -95,7 +95,7 @@ jobs:
           git tag v${{ needs.metadata.outputs.version }}
           git push origin v${{ needs.metadata.outputs.version }}
       - name: Create Release
-        uses: softprops/action-gh-release@c95fe1489396fe8a9eb87c0abf8aa5b2ef267fda # v2.2.1
+        uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631 # v2.2.2
         with:
           generate_release_notes: true
           tag_name: v${{ needs.metadata.outputs.version }}
