@@ -4568,6 +4568,7 @@ dependencies = [
  "clap-verbosity-flag",
  "miette 7.6.0",
  "pixi",
+ "pixi_manifest",
  "rattler_lock",
  "serde_json",
  "tracing",

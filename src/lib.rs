@@ -9,6 +9,7 @@ use pixi::{
     diff::{LockFileDiff, LockFileJsonDiff},
     workspace::Workspace,
 };
+use pixi_manifest;
 use rattler_lock::LockFile;
 
 #[derive(Debug, Clone)]
@@ -40,6 +41,7 @@ pub fn diff(before: Input, after: Input, manifest_path: Option<&Path>) -> miette
     let workspace = match manifest_path {
         Some(path) if path.exists() => match Workspace::from_path(path) {
             Ok(project) => Some(project),
+            Err(pixi_manifest::LoadManifestsError::Io(_)) => None,
             Err(e) => return Err(e.into()),
         },
         _ => None,
