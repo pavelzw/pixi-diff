@@ -138,17 +138,14 @@ $ git show HEAD~20:pixi.lock | pixi-diff --after pixi.lock | pixi-diff-to-markdo
 You can view this generated markdown file in your terminal using [md-tui](https://github.com/henriklovhaug/md-tui) (available on [conda-forge](https://prefix.dev/channels/conda-forge/packages/md-tui)).
 
 ```bash
-git show HEAD~20:pixi.lock | pixi-diff --before - --after pixi.lock | pixi-diff-to-markdown > diff.md
-mdt diff.md
+git show HEAD~20:pixi.lock | pixi-diff --before - --after pixi.lock | pixi-diff-to-markdown | mdt
 # or using pixi exec
-git show HEAD~20:pixi.lock | pixi exec pixi-diff --before - --after pixi.lock | pixi exec pixi-diff-to-markdown > diff.md
-pixi exec -s md-tui -- mdt diff.md
+git show HEAD~20:pixi.lock | pixi exec pixi-diff --before - --after pixi.lock | pixi exec pixi-diff-to-markdown | pixi exec -s md-tui -- mdt
 ```
 
 A couple of issues with this approach:
 
 - md-tui does not support bold and italic links ([henriklovhaug/md-tui #91](https://github.com/henriklovhaug/md-tui/issues/91))
 - md-tui does not support footnotes ([henriklovhaug/md-tui #162](https://github.com/henriklovhaug/md-tui/issues/162))
-- md-tui does not support reading from stdin ([henriklovhaug/md-tui #167](https://github.com/henriklovhaug/md-tui/issues/167))
 - md-tui does not support Windows ([henriklovhaug/md-tui #168](https://github.com/henriklovhaug/md-tui/issues/168))
 - md-tui does not support the `<details>` tag ([henriklovhaug/md-tui #169](https://github.com/henriklovhaug/md-tui/issues/169))
