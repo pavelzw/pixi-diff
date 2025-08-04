@@ -7,7 +7,7 @@ use std::{
 use miette::IntoDiagnostic;
 use pixi::{
     diff::{LockFileDiff, LockFileJsonDiff},
-    Project,
+    global::Project,
 };
 use rattler_lock::LockFile;
 
