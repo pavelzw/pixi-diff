@@ -7,7 +7,7 @@ use std::{
 use miette::IntoDiagnostic;
 use pixi::{
     diff::{LockFileDiff, LockFileJsonDiff},
-    global::Project,
+    workspace::Workspace,
 };
 use rattler_lock::LockFile;
 
@@ -37,12 +37,14 @@ pub fn diff(before: Input, after: Input, manifest_path: Option<&Path>) -> miette
     let before_lockfile = LockFile::from_str(&before_content).into_diagnostic()?;
     let after_lockfile = LockFile::from_str(&after_content).into_diagnostic()?;
 
-    let project = match Project::load_or_else_discover(manifest_path) {
-        Ok(project) => Some(project),
-        Err(pixi::project::ProjectError::NoFileFound) => None,
-        Err(e) => return Err(e.into()),
+    let workspace = match manifest_path {
+        Some(path) if path.exists() => match Workspace::from_path(path) {
+            Ok(project) => Some(project),
+            Err(e) => return Err(e.into()),
+        },
+        _ => None,
     };
     let diff = LockFileDiff::from_lock_files(&before_lockfile, &after_lockfile);
-    let json_diff = LockFileJsonDiff::new(project.as_ref(), diff);
+    let json_diff = LockFileJsonDiff::new(workspace.as_ref(), diff);
     Ok(serde_json::to_string_pretty(&json_diff).expect("failed to convert to json"))
 }
