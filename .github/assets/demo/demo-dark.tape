@@ -24,5 +24,5 @@ Show
 Type@150ms "git show HEAD~20:pixi.lock | pixi-diff --before - --after pixi.lock | pixi-diff-to-markdown | mdt" Sleep 1s Enter
 Sleep 5s
 
-Down@150ms 15
+Down@150ms 20
 Sleep 8s
