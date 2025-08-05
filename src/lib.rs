@@ -45,8 +45,8 @@ pub fn diff(before: Input, after: Input, manifest_path: Option<&Path>) -> miette
         _ => DiscoveryStart::SearchRoot(current_dir().into_diagnostic()?),
     };
 
-    let workspace = match WorkspaceDiscoverer::new(discover_start).discover() {
-        Ok(Some(manifests)) => {
+    let workspace = match WorkspaceDiscoverer::new(discover_start).discover()? {
+        Some(manifests) => {
             let manifest_path = &manifests.value.workspace.provenance.path;
             Some(Workspace::from_path(manifest_path)?)
         }
