@@ -10,9 +10,15 @@ tracing-subscriber = { version = "0.3.19", features = [
   "default",
   "env-filter",
 ] }
-miette = "7.5.0"
-clap = { version = "4.5.27", features = ["derive", "string"] }
-clap-verbosity-flag = { version = "3.0.2", features = ["tracing"] }
-serde_json = "1.0.138"
-rattler_lock = "0.22.40"
-pixi = { git = "https://github.com/prefix-dev/pixi", tag = "v0.41.1" }
+miette = "7.6.0"
+clap = { version = "4.5.41", features = ["derive", "string"] }
+clap-verbosity-flag = { version = "3.0.3", features = ["tracing"] }
+serde_json = "1.0.140"
+rattler_lock = "0.23.13"
+pixi = { git = "https://github.com/prefix-dev/pixi", tag = "v0.50.2" }
+pixi_manifest = { git = "https://github.com/prefix-dev/pixi", tag = "v0.50.2" }
+
+[patch.crates-io]
+# https://github.com/astral-sh/uv/issues/6185
+reqwest-middleware = { git = "https://github.com/astral-sh/reqwest-middleware", rev = "ad8b9d332d1773fde8b4cd008486de5973e0a3f8" }
+reqwest-retry = { git = "https://github.com/astral-sh/reqwest-middleware", rev = "ad8b9d332d1773fde8b4cd008486de5973e0a3f8" }

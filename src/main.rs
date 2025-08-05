@@ -84,7 +84,7 @@ fn main() -> miette::Result<()> {
     tracing::debug!("Before: {:?}, After: {:?}", before, after);
 
     let json = diff(before, after, cli.manifest_path.as_deref())?;
-    println!("{}", json);
+    println!("{json}");
 
     Ok(())
 }
