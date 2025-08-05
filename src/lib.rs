@@ -1,4 +1,5 @@
 use std::{
+    env::current_dir,
     io::Read,
     path::{Path, PathBuf},
     str::FromStr,
@@ -7,8 +8,9 @@ use std::{
 use miette::IntoDiagnostic;
 use pixi::{
     diff::{LockFileDiff, LockFileJsonDiff},
-    Project,
+    workspace::Workspace,
 };
+use pixi_manifest::{DiscoveryStart, WorkspaceDiscoverer};
 use rattler_lock::LockFile;
 
 #[derive(Debug, Clone)]
@@ -37,12 +39,21 @@ pub fn diff(before: Input, after: Input, manifest_path: Option<&Path>) -> miette
     let before_lockfile = LockFile::from_str(&before_content).into_diagnostic()?;
     let after_lockfile = LockFile::from_str(&after_content).into_diagnostic()?;
 
-    let project = match Project::load_or_else_discover(manifest_path) {
-        Ok(project) => Some(project),
-        Err(pixi::project::ProjectError::NoFileFound) => None,
-        Err(e) => return Err(e.into()),
+    let discover_start = match manifest_path {
+        Some(path) if path.is_file() => DiscoveryStart::ExplicitManifest(path.to_path_buf()),
+        Some(path) if path.is_dir() => DiscoveryStart::SearchRoot(path.to_path_buf()),
+        _ => DiscoveryStart::SearchRoot(current_dir().into_diagnostic()?),
     };
+
+    let workspace = match WorkspaceDiscoverer::new(discover_start).discover()? {
+        Some(manifests) => {
+            let manifest_path = &manifests.value.workspace.provenance.path;
+            Some(Workspace::from_path(manifest_path)?)
+        }
+        _ => None,
+    };
+
     let diff = LockFileDiff::from_lock_files(&before_lockfile, &after_lockfile);
-    let json_diff = LockFileJsonDiff::new(project.as_ref(), diff);
+    let json_diff = LockFileJsonDiff::new(workspace.as_ref(), diff);
     Ok(serde_json::to_string_pretty(&json_diff).expect("failed to convert to json"))
 }
