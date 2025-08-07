@@ -46,6 +46,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/gfortran-13.3.0-h9576a4e_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/gfortran_impl_linux-64-13.3.0-h10434e7_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/gfortran_linux-64-13.3.0-hb919d3a_7.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/glow-md-2.1.1-ha770c72_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/gmp-6.3.0-hac33072_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/graphite2-1.3.14-hecca717_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/gxx-13.3.0-h9576a4e_1.conda
@@ -237,6 +238,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/gfortran-13.3.0-h8a56e6e_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/gfortran_impl_linux-aarch64-13.3.0-h174a3c4_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/gfortran_linux-aarch64-13.3.0-h2809cf8_7.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/glow-md-2.1.1-h8af1aa0_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/gmp-6.3.0-h0a1ffab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/graphite2-1.3.14-hfae3067_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/gxx-13.3.0-h8a56e6e_1.conda
@@ -403,6 +405,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/freetype-2.13.3-h694c41f_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/fribidi-1.0.10-hbcb3906_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/osx-64/gdk-pixbuf-2.42.12-ha587570_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/glow-md-2.1.1-h694c41f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/gmp-6.3.0-hf036a51_2.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/graphite2-1.3.14-h21dd04a_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/harfbuzz-10.4.0-h86b413f_0.conda
@@ -516,6 +519,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/freetype-2.13.3-hce30654_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/fribidi-1.0.10-h27ca646_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/gdk-pixbuf-2.42.12-h7ddc832_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/glow-md-2.1.1-hce30654_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/gmp-6.3.0-h7bae524_2.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/graphite2-1.3.14-hec049ff_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/harfbuzz-10.4.0-hb72c1af_0.conda
@@ -627,6 +631,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/freetype-2.13.3-h57928b3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/fribidi-1.0.10-h8d14728_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/gdk-pixbuf-2.42.12-hed59a49_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/glow-md-2.1.1-h57928b3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/graphite2-1.3.14-he0c23c2_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/harfbuzz-10.4.0-h9e37d49_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/icu-75.1-he0c23c2_0.conda
@@ -2274,6 +2279,43 @@ packages:
   license_family: BSD
   size: 30553
   timestamp: 1731939522932
+- conda: https://conda.anaconda.org/conda-forge/linux-64/glow-md-2.1.1-ha770c72_0.conda
+  sha256: 36c8683fe51e5b8310a51e4c6f20b20605c27c169b3bfae42c3ac44895a0721e
+  md5: aa07766662e64399fb9860a75cc05d9d
+  license: MIT
+  license_family: MIT
+  size: 5351841
+  timestamp: 1748677646407
+- conda: https://conda.anaconda.org/conda-forge/linux-aarch64/glow-md-2.1.1-h8af1aa0_0.conda
+  sha256: 5d948aea065d8caf3b5f98a50e46b50dab00e662c78509bc89d0dc2e0a6af10a
+  md5: c7ad11912c98e37dfdd18072bad40498
+  license: MIT
+  license_family: MIT
+  size: 4829355
+  timestamp: 1748679026348
+- conda: https://conda.anaconda.org/conda-forge/osx-64/glow-md-2.1.1-h694c41f_0.conda
+  sha256: 5dcee91d10107fc44071077f4108cfbf87b7918a6bb4862463a5e61b0a452026
+  md5: fbfb06086dc462b151e7c638500989b1
+  constrains:
+  - __osx>=10.12
+  license: MIT
+  license_family: MIT
+  size: 5217195
+  timestamp: 1748677785524
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/glow-md-2.1.1-hce30654_0.conda
+  sha256: 49d9684416f3644ccd1590a1213e0ecf3c97762f0367f10d51df8ee6fcc0ffc1
+  md5: 0a056f8811fea71e2114f1ec34daa846
+  license: MIT
+  license_family: MIT
+  size: 4826763
+  timestamp: 1748677751386
+- conda: https://conda.anaconda.org/conda-forge/win-64/glow-md-2.1.1-h57928b3_0.conda
+  sha256: bc7cd7cb9be55675ece37f21c6cb99e1b12b55a020acb0d18b2ffb2c62a2d218
+  md5: 0199498383c6132c85bc1d7501047294
+  license: MIT
+  license_family: MIT
+  size: 5280969
+  timestamp: 1748677897543
 - conda: https://conda.anaconda.org/conda-forge/linux-64/gmp-6.3.0-hac33072_2.conda
   sha256: 309cf4f04fec0c31b6771a5809a1909b4b3154a2208f52351e1ada006f4c750c
   md5: c94a5994ef49749880a8139cf9afcbe1

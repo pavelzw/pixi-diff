@@ -7,8 +7,8 @@ Set FontSize 28
 Set Width 1920
 Set Height 750
 
-# need to have pixi-diff-to-markdown and mdt (md-tui) installed
-# pixi global install md-tui
+# need to have pixi-diff-to-markdown and glow (glow-md on conda-forge) installed
+# pixi global install glow-md
 # pixi global install pixi-diff-to-markdown
 Hide
 Type "export PATH=$(pwd)/target/debug:$PATH" Enter
@@ -21,7 +21,7 @@ Type "clear" Enter
 Sleep 1s
 Show
 
-Type@150ms "git show HEAD~20:pixi.lock | pixi-diff --before - --after pixi.lock | pixi-diff-to-markdown | mdt" Sleep 1s Enter
+Type@150ms "git show HEAD~20:pixi.lock | pixi-diff --before - --after pixi.lock | pixi-diff-to-markdown | glow -t -w 999" Sleep 1s Enter
 Sleep 5s
 
 Down@150ms 20

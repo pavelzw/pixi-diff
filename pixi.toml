@@ -13,6 +13,7 @@ rust = "==1.88.0"
 openssl = "*"
 pkg-config = "*"
 vhs = "*"
+glow-md = "*"
 
 [target.linux.dependencies]
 compilers = ">=1.7.0"
