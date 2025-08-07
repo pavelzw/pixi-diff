@@ -3,7 +3,7 @@ Output .github/assets/demo/demo-dark.gif
 
 Set Theme "rose-pine-moon"
 Set Shell "bash"
-Set FontSize 28
+Set FontSize 26
 Set Width 1920
 Set Height 750
 

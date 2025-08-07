@@ -3,11 +3,11 @@ Output .github/assets/demo/demo-light.gif
 
 Set Theme "rose-pine-dawn"
 Set Shell "bash"
-Set FontSize 28
+Set FontSize 26
 Set Width 1920
 Set Height 750
 
-# need to have pixi-diff-to-markdown and mdt (glow-md on conda-forge) installed
+# need to have pixi-diff-to-markdown and glow (glow-md on conda-forge) installed
 # pixi global install glow-md
 # pixi global install pixi-diff-to-markdown
 Hide
