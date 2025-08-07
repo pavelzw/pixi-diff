@@ -133,7 +133,23 @@ $ git show HEAD~20:pixi.lock | pixi-diff --after pixi.lock | pixi-diff-to-markdo
 ...
 ```
 
-#### View with md-tui
+#### View in terminal with glow
+
+You can view this generated markdown file in your terminal using [glow](https://github.com/charmbracelet/glow) (available on [conda-forge](https://prefix.dev/channels/conda-forge/packages/glow-md) as `glow-md`).
+
+```bash
+git show HEAD~20:pixi.lock | pixi-diff --before - --after pixi.lock | pixi-diff-to-markdown | glow
+# or using pixi exec
+git show HEAD~20:pixi.lock | pixi exec pixi-diff --before - --after pixi.lock | pixi exec pixi-diff-to-markdown | pixi exec -s glow-md -- glow --tui
+```
+
+A couple of issues with this approach:
+
+- Width is not correct in `--tui` mode ([charmbracelet/glow#805](https://github.com/charmbracelet/glow/issues/805)). Workaround: use `glow --tui --width=$(tput cols)`
+- Links are not properly rendered in `--tui` mode when not reading from stdin ([charmbracelet/glow#806](https://github.com/charmbracelet/glow/issues/806))
+- Unwanted whitespace in beginning when using `--tui` when not reading from stdin ([charmbracelet/glow#807](https://github.com/charmbracelet/glow/issues/807))
+
+#### View in terminal with md-tui
 
 You can view this generated markdown file in your terminal using [md-tui](https://github.com/henriklovhaug/md-tui) (available on [conda-forge](https://prefix.dev/channels/conda-forge/packages/md-tui)).
 
