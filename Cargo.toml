@@ -1,8 +1,8 @@
 [package]
 name = "pixi-diff"
 description = "Generate JSON diffs between pixi lockfiles"
-version = "0.1.1"
-edition = "2021"
+version = "0.1.2"
+edition = "2024"
 
 [dependencies]
 tracing = "0.1.41"
@@ -15,8 +15,9 @@ clap = { version = "4.5.46", features = ["derive", "string"] }
 clap-verbosity-flag = { version = "3.0.4", features = ["tracing"] }
 serde_json = "1.0.143"
 rattler_lock = "0.23.15"
-pixi = { git = "https://github.com/prefix-dev/pixi", tag = "v0.50.2" }
-pixi_manifest = { git = "https://github.com/prefix-dev/pixi", tag = "v0.50.2" }
+# https://github.com/prefix-dev/pixi/issues/4310
+pixi = { git = "https://github.com/prefix-dev/pixi", tag = "v0.53.0" }
+pixi_manifest = { git = "https://github.com/prefix-dev/pixi", tag = "v0.53.0" }
 
 [patch.crates-io]
 # https://github.com/astral-sh/uv/issues/6185
