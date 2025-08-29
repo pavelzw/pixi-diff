@@ -6,9 +6,9 @@ use std::{
 };
 
 use miette::IntoDiagnostic;
-use pixi::{
+use pixi_core::{
+    Workspace,
     diff::{LockFileDiff, LockFileJsonDiff},
-    workspace::Workspace,
 };
 use pixi_manifest::{DiscoveryStart, WorkspaceDiscoverer};
 use rattler_lock::LockFile;

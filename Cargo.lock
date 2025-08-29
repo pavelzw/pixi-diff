@@ -1269,25 +1269,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "clap_complete"
-version = "4.5.57"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4d9501bd3f5f09f7bbee01da9a511073ed30a80cd7a509f1214bb74eadea71ad"
-dependencies = [
- "clap",
-]
-
-[[package]]
-name = "clap_complete_nushell"
-version = "4.5.8"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0a0c951694691e65bf9d421d597d68416c22de9632e884c28412cb8cd8b73dce"
-dependencies = [
- "clap",
- "clap_complete",
-]
-
-[[package]]
 name = "clap_derive"
 version = "4.5.45"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1555,16 +1536,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7d02f3b0da4c6504f86e9cd789d8dbafab48c2321be74e9987593de5a894d93d"
 dependencies = [
  "memchr",
-]
-
-[[package]]
-name = "ctrlc"
-version = "3.4.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "46f93780a459b7d656ef7f071fe699c4d3d2cb201c4b24d085b6ddc505276e73"
-dependencies = [
- "nix 0.30.1",
- "windows-sys 0.59.0",
 ]
 
 [[package]]
@@ -2912,11 +2883,9 @@ dependencies = [
  "percent-encoding",
  "pin-project-lite",
  "socket2 0.6.0",
- "system-configuration",
  "tokio",
  "tower-service",
  "tracing",
- "windows-registry",
 ]
 
 [[package]]
@@ -3905,15 +3874,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ntapi"
-version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e8a3895c6391c39d7fe7ebc444a87eb2991b2a0bc718fdabd071eec617fc68e4"
-dependencies = [
- "winapi",
-]
-
-[[package]]
 name = "nu-ansi-term"
 version = "0.46.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4010,25 +3970,6 @@ checksum = "91df4bbde75afed763b708b7eee1e8e7651e02d97f6d5dd763e89367e957b23b"
 dependencies = [
  "hermit-abi",
  "libc",
-]
-
-[[package]]
-name = "objc2-core-foundation"
-version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1c10c2894a6fed806ade6027bcd50662746363a9589d3ec9d9bef30a4e4bc166"
-dependencies = [
- "bitflags",
-]
-
-[[package]]
-name = "objc2-io-kit"
-version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "71c1c64d6120e51cd86033f67176b1cb66780c2efe34dec55176f77befd93c0a"
-dependencies = [
- "libc",
- "objc2-core-foundation",
 ]
 
 [[package]]
@@ -4352,106 +4293,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "pixi"
-version = "0.53.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.53.0#aa5270d67ebdc42f41571b8a883f411c39b870d1"
-dependencies = [
- "ahash",
- "chrono",
- "clap",
- "clap_complete",
- "clap_complete_nushell",
- "console 0.15.11",
- "ctrlc",
- "deno_task_shell",
- "dialoguer",
- "dunce",
- "fancy_display",
- "flate2",
- "fs-err",
- "fs_extra",
- "futures",
- "human_bytes",
- "indexmap 2.11.0",
- "indicatif",
- "is_executable",
- "itertools 0.14.0",
- "libc",
- "miette 7.6.0",
- "minijinja",
- "nix 0.29.0",
- "pathdiff",
- "pep508_rs",
- "pixi_command_dispatcher",
- "pixi_config",
- "pixi_consts",
- "pixi_core",
- "pixi_git",
- "pixi_manifest",
- "pixi_progress",
- "pixi_pty",
- "pixi_pypi_spec",
- "pixi_record",
- "pixi_reporters",
- "pixi_spec",
- "pixi_utils",
- "pixi_uv_conversions",
- "pypi_mapping",
- "pypi_modifiers",
- "rattler",
- "rattler_conda_types",
- "rattler_digest",
- "rattler_lock",
- "rattler_networking",
- "rattler_repodata_gateway",
- "rattler_shell",
- "rattler_solve",
- "rattler_virtual_packages",
- "regex",
- "reqwest",
- "reqwest-middleware",
- "same-file",
- "self-replace",
- "serde",
- "serde_json",
- "serde_with",
- "sha2",
- "signal-hook",
- "strsim",
- "tabwriter",
- "tar",
- "temp-env",
- "tempfile",
- "thiserror 2.0.16",
- "tokio",
- "tokio-util",
- "toml_edit 0.22.27",
- "tracing",
- "tracing-subscriber",
- "typed-path",
- "url",
- "uv-cache",
- "uv-client",
- "uv-configuration",
- "uv-distribution",
- "uv-installer",
- "uv-normalize",
- "uv-pep508",
- "uv-pypi-types",
- "uv-python",
- "uv-requirements-txt",
- "uv-types",
- "zip 2.4.2",
-]
-
-[[package]]
 name = "pixi-diff"
 version = "0.1.2"
 dependencies = [
  "clap",
  "clap-verbosity-flag",
  "miette 7.6.0",
- "pixi",
+ "pixi_core",
  "pixi_manifest",
  "rattler_lock",
  "serde_json",
@@ -4799,7 +4647,6 @@ dependencies = [
  "pixi_toml",
  "pyproject-toml",
  "rattler_conda_types",
- "rattler_lock",
  "rattler_solve",
  "rattler_virtual_packages",
  "regex",
@@ -4822,16 +4669,6 @@ source = "git+https://github.com/prefix-dev/pixi?tag=v0.53.0#aa5270d67ebdc42f415
 dependencies = [
  "indicatif",
  "parking_lot",
-]
-
-[[package]]
-name = "pixi_pty"
-version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.53.0#aa5270d67ebdc42f41571b8a883f411c39b870d1"
-dependencies = [
- "libc",
- "nix 0.29.0",
- "signal-hook",
 ]
 
 [[package]]
@@ -5500,15 +5337,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "174f5eae5f731bccd3f448e7e37d7f8b3a958bb7c442316ddf58dd59c02c4063"
 dependencies = [
  "anyhow",
- "clap",
- "console 0.16.0",
  "digest",
  "dirs",
  "fs-err",
  "futures",
  "humantime",
  "indexmap 2.11.0",
- "indicatif",
  "itertools 0.14.0",
  "memchr",
  "memmap2 0.9.8",
@@ -5853,7 +5687,6 @@ dependencies = [
  "rattler_pty",
  "serde_json",
  "shlex",
- "sysinfo",
  "tempfile",
  "thiserror 2.0.16",
  "tracing",
@@ -6851,16 +6684,6 @@ dependencies = [
  "cfg-if",
  "cpufeatures",
  "digest",
- "sha2-asm",
-]
-
-[[package]]
-name = "sha2-asm"
-version = "0.6.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b845214d6175804686b2bd482bcffe96651bb2d1200742b712003504a2dac1ab"
-dependencies = [
- "cc",
 ]
 
 [[package]]
@@ -7235,41 +7058,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "sysinfo"
-version = "0.36.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "252800745060e7b9ffb7b2badbd8b31cfa4aa2e61af879d0a3bf2a317c20217d"
-dependencies = [
- "libc",
- "memchr",
- "ntapi",
- "objc2-core-foundation",
- "objc2-io-kit",
- "windows 0.61.3",
-]
-
-[[package]]
-name = "system-configuration"
-version = "0.6.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3c879d448e9d986b661742763247d3693ed13609438cf3d006f51f5368a5ba6b"
-dependencies = [
- "bitflags",
- "core-foundation 0.9.4",
- "system-configuration-sys",
-]
-
-[[package]]
-name = "system-configuration-sys"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8e1d1b10ced5ca923a1fcb8d03e96b8d3268065d724548c0211415ff6ac6bac4"
-dependencies = [
- "core-foundation-sys",
- "libc",
-]
-
-[[package]]
 name = "tabwriter"
 version = "1.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -7300,16 +7088,6 @@ name = "target-lexicon"
 version = "0.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e502f78cdbb8ba4718f566c418c52bc729126ffd16baee5baa718cf25dd5a69a"
-
-[[package]]
-name = "temp-env"
-version = "0.3.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "96374855068f47402c3121c6eed88d29cb1de8f3ab27090e273e420bdabcf050"
-dependencies = [
- "futures",
- "parking_lot",
-]
 
 [[package]]
 name = "tempfile"
@@ -10031,7 +9809,6 @@ dependencies = [
  "lzma-rs",
  "memchr",
  "thiserror 2.0.16",
- "time",
  "xz2",
  "zopfli",
  "zstd",
