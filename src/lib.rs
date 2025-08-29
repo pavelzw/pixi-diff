@@ -12,6 +12,7 @@ use pixi::{
 };
 use pixi_manifest::{DiscoveryStart, WorkspaceDiscoverer};
 use rattler_lock::LockFile;
+use tracing::error;
 
 #[derive(Debug, Clone)]
 pub enum Input {
@@ -45,12 +46,17 @@ pub fn diff(before: Input, after: Input, manifest_path: Option<&Path>) -> miette
         _ => DiscoveryStart::SearchRoot(current_dir().into_diagnostic()?),
     };
 
-    let workspace = match WorkspaceDiscoverer::new(discover_start).discover()? {
-        Some(manifests) => {
+    let workspace = match WorkspaceDiscoverer::new(discover_start).discover() {
+        Ok(Some(manifests)) => {
             let manifest_path = &manifests.value.workspace.provenance.path;
             Some(Workspace::from_path(manifest_path)?)
         }
-        _ => None,
+        Ok(None) => None,
+        Err(err) => {
+            error!("Error discovering workspace: {err}");
+            error!("Skipping workspace discovery. This will result in explicit/implicit not being included in the diff.");
+            None
+        }
     };
 
     let diff = LockFileDiff::from_lock_files(&before_lockfile, &after_lockfile);
