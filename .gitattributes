@@ -2,3 +2,4 @@
 pixi.lock linguist-language=YAML merge=binary
 # needed for integration tests to pass on Windows as rust println always does \n and not \r\n
 tests/resources/diff.json text eol=lf
+Cargo.lock linguist-language=TOML merge=binary
