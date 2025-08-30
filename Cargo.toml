@@ -14,10 +14,12 @@ miette = "7.6.0"
 clap = { version = "4.5.46", features = ["derive", "string"] }
 clap-verbosity-flag = { version = "3.0.4", features = ["tracing"] }
 serde_json = "1.0.143"
-rattler_lock = "0.23.14"
+rattler_lock = { version = "0.23.14", default-features = false }
 # https://github.com/prefix-dev/pixi/issues/4310
 pixi_core = { git = "https://github.com/prefix-dev/pixi", tag = "v0.53.0" }
-pixi_manifest = { git = "https://github.com/prefix-dev/pixi", tag = "v0.53.0" }
+pixi_manifest = { git = "https://github.com/prefix-dev/pixi", tag = "v0.53.0", features = [
+  "rattler_lock",
+] }
 
 [patch.crates-io]
 # https://github.com/astral-sh/uv/issues/6185
