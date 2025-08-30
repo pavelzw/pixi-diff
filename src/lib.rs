@@ -54,7 +54,9 @@ pub fn diff(before: Input, after: Input, manifest_path: Option<&Path>) -> miette
         Ok(None) => None,
         Err(err) => {
             error!("Error discovering workspace: {err}");
-            error!("Skipping workspace discovery. This will result in explicit/implicit not being included in the diff.");
+            error!(
+                "Skipping workspace discovery. This will result in explicit/implicit not being included in the diff."
+            );
             None
         }
     };

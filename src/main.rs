@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use clap::Parser;
 use clap_verbosity_flag::Verbosity;
 
-use pixi_diff::{diff, Input};
+use pixi_diff::{Input, diff};
 
 /* -------------------------------------------- CLI -------------------------------------------- */
 
