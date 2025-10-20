@@ -3997,7 +3997,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "pixi-diff"
+name = "pixi-diff-cli"
 version = "0.1.2"
 dependencies = [
  "clap",

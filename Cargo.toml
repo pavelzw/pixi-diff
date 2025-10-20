@@ -1,5 +1,5 @@
 [package]
-name = "pixi-diff"
+name = "pixi-diff-cli"
 description = "Generate JSON diffs between pixi lockfiles"
 version = "0.1.2"
 edition = "2024"
@@ -20,6 +20,10 @@ pixi_diff = { git = "https://github.com/prefix-dev/pixi", tag = "v0.57.0" }
 pixi_manifest = { git = "https://github.com/prefix-dev/pixi", tag = "v0.57.0", features = [
   "rattler_lock",
 ] }
+
+[[bin]]
+name = "pixi-diff"
+path = "src/main.rs"
 
 [patch.crates-io]
 # https://github.com/astral-sh/uv/issues/6185
