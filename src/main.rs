@@ -1,9 +1,9 @@
-use std::path::PathBuf;
-
 use clap::Parser;
 use clap_verbosity_flag::Verbosity;
 
-use pixi_diff::{Input, diff};
+use std::path::PathBuf;
+
+use pixi_diff_cli::{Input, diff};
 
 /* -------------------------------------------- CLI -------------------------------------------- */
 
