@@ -1,19 +1,7 @@
 use clap::Parser;
 use clap_verbosity_flag::Verbosity;
 
-use std::{
-    env::current_dir,
-    io::Read,
-    path::{Path, PathBuf},
-    str::FromStr,
-};
-
-use miette::IntoDiagnostic;
-use pixi_core::Workspace;
-use pixi_diff::{LockFileDiff, LockFileJsonDiff};
-use pixi_manifest::{DiscoveryStart, WorkspaceDiscoverer};
-use rattler_lock::LockFile;
-use tracing::error;
+use std::path::PathBuf;
 
 use pixi_diff_cli::{Input, diff};
 

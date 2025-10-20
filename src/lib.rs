@@ -1,6 +1,3 @@
-use clap::Parser;
-use clap_verbosity_flag::Verbosity;
-
 use std::{
     env::current_dir,
     io::Read,
