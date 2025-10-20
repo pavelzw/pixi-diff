@@ -6,10 +6,8 @@ use std::{
 };
 
 use miette::IntoDiagnostic;
-use pixi_core::{
-    Workspace,
-    diff::{LockFileDiff, LockFileJsonDiff},
-};
+use pixi_core::Workspace;
+use pixi_diff::{LockFileDiff, LockFileJsonDiff};
 use pixi_manifest::{DiscoveryStart, WorkspaceDiscoverer};
 use rattler_lock::LockFile;
 use tracing::error;
@@ -48,8 +46,8 @@ pub fn diff(before: Input, after: Input, manifest_path: Option<&Path>) -> miette
 
     let workspace = match WorkspaceDiscoverer::new(discover_start).discover() {
         Ok(Some(manifests)) => {
-            let manifest_path = &manifests.value.workspace.provenance.path;
-            Some(Workspace::from_path(manifest_path)?)
+            let manifest_path = manifests.value.workspace.provenance.path.clone();
+            Some(Workspace::from_path(&manifest_path)?)
         }
         Ok(None) => None,
         Err(err) => {
@@ -62,6 +60,9 @@ pub fn diff(before: Input, after: Input, manifest_path: Option<&Path>) -> miette
     };
 
     let diff = LockFileDiff::from_lock_files(&before_lockfile, &after_lockfile);
-    let json_diff = LockFileJsonDiff::new(workspace.as_ref(), diff);
+    let json_diff = LockFileJsonDiff::new(
+        workspace.as_ref().map(|ws| ws.named_environments().clone()),
+        diff,
+    );
     Ok(serde_json::to_string_pretty(&json_diff).expect("failed to convert to json"))
 }

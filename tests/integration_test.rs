@@ -1,4 +1,4 @@
-use pixi_diff::{Input, diff};
+use pixi_diff_cli::{Input, diff};
 use std::path::Path;
 
 #[test]
