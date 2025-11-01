@@ -11,7 +11,7 @@ tracing-subscriber = { version = "0.3.19", features = [
   "env-filter",
 ] }
 miette = "7.6.0"
-clap = { version = "4.5.48", features = ["derive", "string"] }
+clap = { version = "4.5.51", features = ["derive", "string"] }
 clap-verbosity-flag = { version = "3.0.4", features = ["tracing"] }
 serde_json = "1.0.145"
 rattler_lock = { version = "0.25.0", default-features = false }
