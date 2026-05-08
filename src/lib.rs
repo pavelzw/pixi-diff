@@ -2,7 +2,6 @@ use std::{
     env::current_dir,
     io::Read,
     path::{Path, PathBuf},
-    str::FromStr,
 };
 
 use miette::IntoDiagnostic;
@@ -35,8 +34,10 @@ pub fn diff(before: Input, after: Input, manifest_path: Option<&Path>) -> miette
     let before_content = read_input(&before)?;
     let after_content = read_input(&after)?;
 
-    let before_lockfile = LockFile::from_str(&before_content).into_diagnostic()?;
-    let after_lockfile = LockFile::from_str(&after_content).into_diagnostic()?;
+    let before_lockfile =
+        LockFile::from_str_with_base_directory(&before_content, None).into_diagnostic()?;
+    let after_lockfile =
+        LockFile::from_str_with_base_directory(&after_content, None).into_diagnostic()?;
 
     let discover_start = match manifest_path {
         Some(path) if path.is_file() => DiscoveryStart::ExplicitManifest(path.to_path_buf()),
