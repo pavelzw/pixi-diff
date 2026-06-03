@@ -29,5 +29,6 @@ name = "pixi-diff"
 path = "src/main.rs"
 
 [patch.crates-io]
+# Remove this hack once https://github.com/prefix-dev/pixi/blob/v0.70.0/patches/reqwest_middleware_shim/Cargo.toml is gone
 reqwest-middleware = { path = "patches/reqwest_middleware_shim" }
 version-ranges = { git = "https://github.com/astral-sh/pubgrub", rev = "d8efd77673c9a90792da9da31b6c0da7ea8a324b" }
