@@ -4597,7 +4597,7 @@ dependencies = [
 
 [[package]]
 name = "pixi-diff-cli"
-version = "0.1.5"
+version = "0.1.6"
 dependencies = [
  "clap",
  "clap-verbosity-flag",
