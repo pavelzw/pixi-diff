@@ -117,7 +117,7 @@ version = "1.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "40c48f72fd53cd289104fc64099abca73db4166ad86ea0b4341abe65af83dadc"
 dependencies = [
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -128,7 +128,7 @@ checksum = "291e6a250ff86cd4a820112fb8898808a366d8f9f58ce16d1f538353ad55747d"
 dependencies = [
  "anstyle",
  "once_cell_polyfill",
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -1056,7 +1056,7 @@ dependencies = [
 [[package]]
 name = "barrier_cell"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "parking_lot",
  "thiserror 2.0.18",
@@ -2028,7 +2028,7 @@ dependencies = [
  "libc",
  "option-ext",
  "redox_users",
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -2223,7 +2223,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -2272,6 +2272,14 @@ dependencies = [
 name = "fancy_display"
 version = "0.1.0"
 source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+dependencies = [
+ "console",
+]
+
+[[package]]
+name = "fancy_display"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "console",
 ]
@@ -3703,7 +3711,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "160f2eade097f30263b548aae5deb12ad349c909baa710fa24b92c9090b2e006"
 dependencies = [
  "scopeguard",
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -3729,7 +3737,7 @@ version = "1.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7a1886916523694cd6ea3d175f03a1e5010699a2a4cc13696d83d7bea1d80638"
 dependencies = [
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -4603,8 +4611,8 @@ dependencies = [
  "clap-verbosity-flag",
  "miette 7.6.0",
  "pixi_core",
- "pixi_diff",
- "pixi_manifest",
+ "pixi_diff 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_manifest 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
  "rattler_digest",
  "rattler_lock",
  "serde_json",
@@ -4617,7 +4625,17 @@ name = "pixi_auth"
 version = "0.1.0"
 source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
 dependencies = [
- "pixi_config",
+ "pixi_config 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "rattler_networking",
+ "tracing",
+]
+
+[[package]]
+name = "pixi_auth"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "pixi_config 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_networking",
  "tracing",
 ]
@@ -4625,7 +4643,7 @@ dependencies = [
 [[package]]
 name = "pixi_build_discovery"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "dunce",
  "itertools 0.14.0",
@@ -4633,11 +4651,11 @@ dependencies = [
  "ordermap",
  "pixi_build_type_conversions",
  "pixi_build_types",
- "pixi_config",
- "pixi_consts",
- "pixi_manifest",
- "pixi_spec",
- "pixi_spec_containers",
+ "pixi_config 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_manifest 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_spec_containers 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_conda_types",
  "serde",
  "serde_json",
@@ -4648,7 +4666,7 @@ dependencies = [
 [[package]]
 name = "pixi_build_frontend"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "fs-err",
  "futures",
@@ -4669,20 +4687,20 @@ dependencies = [
 [[package]]
 name = "pixi_build_type_conversions"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "itertools 0.14.0",
  "ordermap",
  "pixi_build_types",
- "pixi_manifest",
- "pixi_spec",
+ "pixi_manifest 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_conda_types",
 ]
 
 [[package]]
 name = "pixi_build_types"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "ordermap",
  "pixi_stable_hash",
@@ -4691,13 +4709,14 @@ dependencies = [
  "serde",
  "serde_json",
  "serde_with",
+ "thiserror 2.0.18",
  "url",
 ]
 
 [[package]]
 name = "pixi_command_dispatcher"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "async-fd-lock",
  "base64 0.22.1",
@@ -4723,17 +4742,17 @@ dependencies = [
  "pixi_compute_network",
  "pixi_compute_reporters",
  "pixi_compute_sources",
- "pixi_consts",
- "pixi_git",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_glob",
- "pixi_path",
+ "pixi_path 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_record",
- "pixi_spec",
- "pixi_spec_containers",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_spec_containers 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_stable_hash",
  "pixi_url",
- "pixi_utils",
- "pixi_variant",
+ "pixi_utils 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_variant 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler",
  "rattler_conda_types",
  "rattler_digest",
@@ -4760,17 +4779,17 @@ dependencies = [
 [[package]]
 name = "pixi_compute_cache_dirs"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "pixi_compute_engine",
  "pixi_compute_env_vars",
- "pixi_path",
+ "pixi_path 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
 ]
 
 [[package]]
 name = "pixi_compute_engine"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "cmp_any",
  "futures",
@@ -4782,7 +4801,7 @@ dependencies = [
 [[package]]
 name = "pixi_compute_env_vars"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "pixi_compute_engine",
 ]
@@ -4790,7 +4809,7 @@ dependencies = [
 [[package]]
 name = "pixi_compute_network"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "pixi_compute_engine",
  "rattler_networking",
@@ -4799,7 +4818,7 @@ dependencies = [
 [[package]]
 name = "pixi_compute_reporters"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "dashmap",
  "futures",
@@ -4811,7 +4830,7 @@ dependencies = [
 [[package]]
 name = "pixi_compute_sources"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "derive_more",
  "dirs",
@@ -4821,11 +4840,11 @@ dependencies = [
  "pixi_compute_engine",
  "pixi_compute_network",
  "pixi_compute_reporters",
- "pixi_consts",
- "pixi_git",
- "pixi_path",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_path 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_record",
- "pixi_spec",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_url",
  "serde",
  "thiserror 2.0.18",
@@ -4846,7 +4865,34 @@ dependencies = [
  "itertools 0.14.0",
  "miette 7.6.0",
  "nix 0.29.0",
- "pixi_consts",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "rattler",
+ "rattler_conda_types",
+ "rattler_networking",
+ "rattler_repodata_gateway",
+ "reqwest",
+ "serde",
+ "serde_ignored",
+ "serde_json",
+ "thiserror 2.0.18",
+ "toml_edit 0.23.10+spec-1.0.0",
+ "tracing",
+ "url",
+]
+
+[[package]]
+name = "pixi_config"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "clap",
+ "console",
+ "dirs",
+ "fs-err",
+ "itertools 0.14.0",
+ "miette 7.6.0",
+ "nix 0.29.0",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler",
  "rattler_conda_types",
  "rattler_networking",
@@ -4873,9 +4919,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "pixi_consts"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "console",
+ "rattler_cache",
+ "rattler_conda_types",
+ "url",
+]
+
+[[package]]
 name = "pixi_core"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "async-once-cell",
  "barrier_cell",
@@ -4884,7 +4941,7 @@ dependencies = [
  "dashmap",
  "dialoguer",
  "dunce",
- "fancy_display",
+ "fancy_display 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "fs-err",
  "fs_extra",
  "futures",
@@ -4905,22 +4962,22 @@ dependencies = [
  "pixi_build_types",
  "pixi_command_dispatcher",
  "pixi_compute_reporters",
- "pixi_config",
- "pixi_consts",
+ "pixi_config 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_default_versions",
- "pixi_diff",
- "pixi_git",
+ "pixi_diff 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_glob",
  "pixi_install_pypi",
- "pixi_manifest",
- "pixi_path",
+ "pixi_manifest 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_path 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_progress",
- "pixi_pypi_spec",
+ "pixi_pypi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_python_status",
  "pixi_record",
  "pixi_reporters",
- "pixi_spec",
- "pixi_utils",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_utils 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_uv_context",
  "pixi_uv_conversions",
  "pypi_mapping",
@@ -4978,7 +5035,7 @@ dependencies = [
 [[package]]
 name = "pixi_default_versions"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "rattler_conda_types",
 ]
@@ -4992,8 +5049,26 @@ dependencies = [
  "console",
  "indexmap 2.14.0",
  "itertools 0.14.0",
- "pixi_consts",
- "pixi_manifest",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_manifest 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "rattler_conda_types",
+ "rattler_lock",
+ "serde",
+ "serde_json",
+ "tabwriter",
+]
+
+[[package]]
+name = "pixi_diff"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "ahash",
+ "console",
+ "indexmap 2.14.0",
+ "itertools 0.14.0",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_manifest 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_conda_types",
  "rattler_lock",
  "serde",
@@ -5010,7 +5085,28 @@ dependencies = [
  "dashmap",
  "dunce",
  "fs-err",
- "pixi_utils",
+ "pixi_utils 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "rattler_networking",
+ "reqwest",
+ "serde",
+ "thiserror 2.0.18",
+ "tokio",
+ "tracing",
+ "url",
+ "urlencoding",
+ "which",
+]
+
+[[package]]
+name = "pixi_git"
+version = "0.0.1"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "astral-reqwest-middleware",
+ "dashmap",
+ "dunce",
+ "fs-err",
+ "pixi_utils 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_networking",
  "reqwest",
  "serde",
@@ -5025,7 +5121,7 @@ dependencies = [
 [[package]]
 name = "pixi_glob"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "dashmap",
  "fs-err",
@@ -5042,26 +5138,26 @@ dependencies = [
 [[package]]
 name = "pixi_install_pypi"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "ahash",
  "console",
  "csv",
- "fancy_display",
+ "fancy_display 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "fs-err",
  "itertools 0.14.0",
  "miette 7.6.0",
  "pep440_rs",
  "pep508_rs",
  "percent-encoding",
- "pixi_consts",
- "pixi_git",
- "pixi_manifest",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_manifest 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_progress",
  "pixi_python_status",
  "pixi_record",
  "pixi_reporters",
- "pixi_utils",
+ "pixi_utils 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_uv_context",
  "pixi_uv_conversions",
  "pypi_modifiers",
@@ -5106,7 +5202,7 @@ dependencies = [
  "chrono",
  "console",
  "dunce",
- "fancy_display",
+ "fancy_display 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
  "fs-err",
  "indexmap 2.14.0",
  "itertools 0.14.0",
@@ -5116,11 +5212,53 @@ dependencies = [
  "pathdiff",
  "pep440_rs",
  "pep508_rs",
- "pixi_consts",
- "pixi_pypi_spec",
- "pixi_spec",
- "pixi_spec_containers",
- "pixi_toml",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_pypi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_spec_containers 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_toml 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pyproject-toml",
+ "rattler_conda_types",
+ "rattler_lock",
+ "rattler_solve",
+ "rattler_virtual_packages",
+ "regex",
+ "serde",
+ "serde-value",
+ "spdx 0.10.9",
+ "strsim",
+ "strum",
+ "thiserror 2.0.18",
+ "toml-span",
+ "toml_edit 0.23.10+spec-1.0.0",
+ "tracing",
+ "url",
+]
+
+[[package]]
+name = "pixi_manifest"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "chrono",
+ "console",
+ "dunce",
+ "fancy_display 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "fs-err",
+ "indexmap 2.14.0",
+ "itertools 0.14.0",
+ "miette 7.6.0",
+ "minijinja",
+ "once_cell",
+ "pathdiff",
+ "pep440_rs",
+ "pep508_rs",
+ "pixi_build_types",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_pypi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_spec_containers 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_toml 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pyproject-toml",
  "rattler_conda_types",
  "rattler_lock",
@@ -5151,9 +5289,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "pixi_path"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "fs-err",
+ "serde",
+ "thiserror 2.0.18",
+ "typed-path",
+]
+
+[[package]]
 name = "pixi_progress"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "indicatif",
  "parking_lot",
@@ -5167,9 +5316,29 @@ dependencies = [
  "itertools 0.14.0",
  "pep440_rs",
  "pep508_rs",
- "pixi_git",
- "pixi_spec",
- "pixi_toml",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_toml 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.18",
+ "toml-span",
+ "toml_edit 0.23.10+spec-1.0.0",
+ "tracing",
+ "url",
+]
+
+[[package]]
+name = "pixi_pypi_spec"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "itertools 0.14.0",
+ "pep440_rs",
+ "pep508_rs",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_toml 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "serde",
  "serde_json",
  "thiserror 2.0.18",
@@ -5182,7 +5351,7 @@ dependencies = [
 [[package]]
 name = "pixi_python_status"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "rattler",
 ]
@@ -5190,16 +5359,16 @@ dependencies = [
 [[package]]
 name = "pixi_record"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "file_url",
  "itertools 0.14.0",
  "miette 7.6.0",
- "pixi_git",
- "pixi_path",
- "pixi_spec",
- "pixi_spec_containers",
- "pixi_variant",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_path 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_spec_containers 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_variant 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_conda_types",
  "rattler_digest",
  "rattler_lock",
@@ -5215,7 +5384,7 @@ dependencies = [
 [[package]]
 name = "pixi_reporters"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "console",
  "futures",
@@ -5227,7 +5396,7 @@ dependencies = [
  "pixi_build_discovery",
  "pixi_command_dispatcher",
  "pixi_compute_reporters",
- "pixi_git",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_progress",
  "rattler",
  "rattler_conda_types",
@@ -5256,11 +5425,40 @@ dependencies = [
  "humantime",
  "itertools 0.14.0",
  "pathdiff",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_path 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_toml 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "rattler_conda_types",
+ "rattler_digest",
+ "rattler_solve",
+ "serde",
+ "serde-untagged",
+ "serde_with",
+ "thiserror 2.0.18",
+ "toml-span",
+ "toml_edit 0.23.10+spec-1.0.0",
+ "tracing",
+ "typed-path",
+ "url",
+]
+
+[[package]]
+name = "pixi_spec"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "chrono",
+ "dirs",
+ "file_url",
+ "humantime",
+ "itertools 0.14.0",
+ "pathdiff",
  "pixi_build_types",
- "pixi_consts",
- "pixi_git",
- "pixi_path",
- "pixi_toml",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_path 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_toml 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_conda_types",
  "rattler_digest",
  "rattler_lock",
@@ -5283,7 +5481,19 @@ source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d
 dependencies = [
  "itertools 0.14.0",
  "ordermap",
- "pixi_spec",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "rattler_conda_types",
+ "serde",
+]
+
+[[package]]
+name = "pixi_spec_containers"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "itertools 0.14.0",
+ "ordermap",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_conda_types",
  "serde",
 ]
@@ -5291,7 +5501,7 @@ dependencies = [
 [[package]]
 name = "pixi_stable_hash"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "ordermap",
  "rattler_conda_types",
@@ -5316,9 +5526,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "pixi_toml"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "digest 0.10.7",
+ "hex",
+ "indexmap 2.14.0",
+ "itertools 0.14.0",
+ "miette 7.6.0",
+ "strsim",
+ "strum",
+ "toml-span",
+]
+
+[[package]]
 name = "pixi_url"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "astral-reqwest-middleware",
  "bzip2 0.6.1",
@@ -5329,8 +5554,8 @@ dependencies = [
  "indicatif",
  "lzma-rust2",
  "pixi_record",
- "pixi_spec",
- "pixi_utils",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_utils 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_digest",
  "rattler_networking",
  "reqwest",
@@ -5360,10 +5585,10 @@ dependencies = [
  "itertools 0.14.0",
  "miette 7.6.0",
  "pep508_rs",
- "pixi_auth",
- "pixi_config",
- "pixi_consts",
- "pixi_variant",
+ "pixi_auth 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_config 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
+ "pixi_variant 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.0)",
  "rattler_conda_types",
  "rattler_networking",
  "rattler_shell",
@@ -5386,14 +5611,55 @@ dependencies = [
 ]
 
 [[package]]
+name = "pixi_utils"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
+dependencies = [
+ "astral-reqwest-middleware",
+ "astral-reqwest-retry",
+ "async-fd-lock",
+ "filetime",
+ "fs-err",
+ "indicatif",
+ "is_executable",
+ "itertools 0.14.0",
+ "miette 7.6.0",
+ "pep508_rs",
+ "pixi_auth 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_config 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_consts 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_variant 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "rattler_conda_types",
+ "rattler_networking",
+ "rattler_shell",
+ "reqwest",
+ "retry-policies",
+ "rlimit",
+ "rustls-native-certs",
+ "rustls-pki-types",
+ "serde",
+ "serde_json",
+ "serde_yaml",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+ "url",
+ "uv-configuration",
+ "webpki-root-certs 1.0.7",
+ "xxhash-rust",
+]
+
+[[package]]
 name = "pixi_uv_context"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "fs-err",
  "miette 7.6.0",
- "pixi_config",
- "pixi_utils",
+ "pixi_config 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_utils 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_uv_conversions",
  "reqwest",
  "tracing",
@@ -5412,7 +5678,7 @@ dependencies = [
 [[package]]
 name = "pixi_uv_conversions"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "chrono",
  "dunce",
@@ -5420,11 +5686,11 @@ dependencies = [
  "miette 7.6.0",
  "pep440_rs",
  "pep508_rs",
- "pixi_git",
- "pixi_manifest",
- "pixi_pypi_spec",
+ "pixi_git 0.0.1 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_manifest 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
+ "pixi_pypi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "pixi_record",
- "pixi_spec",
+ "pixi_spec 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_lock",
  "serde_json",
  "thiserror 2.0.18",
@@ -5448,6 +5714,14 @@ dependencies = [
 name = "pixi_variant"
 version = "0.1.0"
 source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+dependencies = [
+ "serde",
+]
+
+[[package]]
+name = "pixi_variant"
+version = "0.1.0"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "pixi_build_types",
  "rattler_lock",
@@ -5712,7 +5986,7 @@ dependencies = [
 [[package]]
 name = "pypi_mapping"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "astral-reqwest-middleware",
  "astral-reqwest-retry",
@@ -5725,7 +5999,7 @@ dependencies = [
  "miette 7.6.0",
  "pep440_rs",
  "pep508_rs",
- "pixi_config",
+ "pixi_config 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_conda_types",
  "rattler_digest",
  "rattler_networking",
@@ -5741,11 +6015,11 @@ dependencies = [
 [[package]]
 name = "pypi_modifiers"
 version = "0.1.0"
-source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.0#8687b0d13e0f52e2c3d3ee6e7f062a98252662a6"
+source = "git+https://github.com/prefix-dev/pixi?tag=v0.70.1#5b522f8fb9f3b3da3da173452ebfc8fcdc5365e0"
 dependencies = [
  "miette 7.6.0",
  "pixi_default_versions",
- "pixi_manifest",
+ "pixi_manifest 0.1.0 (git+https://github.com/prefix-dev/pixi?tag=v0.70.1)",
  "rattler_conda_types",
  "rattler_virtual_packages",
  "regex",
@@ -6943,7 +7217,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys 0.4.15",
- "windows-sys 0.52.0",
+ "windows-sys 0.59.0",
 ]
 
 [[package]]
@@ -6956,7 +7230,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys 0.12.1",
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -7036,7 +7310,7 @@ dependencies = [
  "security-framework 3.7.0",
  "security-framework-sys",
  "webpki-root-certs 1.0.7",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -7974,7 +8248,7 @@ dependencies = [
  "getrandom 0.4.2",
  "once_cell",
  "rustix 1.1.4",
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -7984,7 +8258,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "230a1b821ccbd75b185820a1f1ff7b14d21da1e442e22c0863ea5f08771a8874"
 dependencies = [
  "rustix 1.1.4",
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -10127,7 +10401,7 @@ version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
 dependencies = [
- "windows-sys 0.60.2",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
