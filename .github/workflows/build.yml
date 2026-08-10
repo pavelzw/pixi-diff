@@ -99,5 +99,5 @@ jobs:
         with:
           generate_release_notes: true
           tag_name: v${{ needs.metadata.outputs.version }}
-          draft: true
+          draft: false
           files: pixi-diff-*
