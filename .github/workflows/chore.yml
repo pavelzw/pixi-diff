@@ -50,7 +50,7 @@ jobs:
           delete: true
 
       - name: Assign labels
-        uses: release-drafter/release-drafter/autolabeler@eada3c96a64734dd381cfbda23511034e328ddb0 # v7.6.0
+        uses: release-drafter/release-drafter/autolabeler@978bb0b30c5ee8cdd332ced253758157150d43f0 # v7.10.0
         with:
           disable-releaser: true
           disable-autolabeler: false
