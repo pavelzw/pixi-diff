@@ -10,7 +10,7 @@ test = "cargo test"
 demo = "vhs .github/assets/demo/demo-light.tape && vhs .github/assets/demo/demo-dark.tape"
 
 [dependencies]
-rust = "==1.95.0"
+rust = "==1.99.1"
 openssl = "*"
 pkg-config = "*"
 vhs = "*"
