@@ -61,7 +61,7 @@ fn main() -> miette::Result<()> {
         && cli.before_positional.is_none()
         && cli.after_positional.is_none()
     {
-        miette::bail!("Either [BEFORE] or [AFTER] is required")
+        miette::bail!("Either [BEFORE] or [AFTER] is required");
     }
 
     let (before, after) = if let (Some(before_positional), Some(after_positional)) =
